@@ -1,47 +1,71 @@
-/* Reset gaya default */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Gaya untuk body */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
     padding: 20px;
-    background: #f4f4f4;
 }
 
-/* Gaya untuk header */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Clearfix for floated elements */
+}
+
 header {
-    background: #333;
+    background-color: #333;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 10px 20px;
 }
 
-/* Gaya untuk h1 */
 header h1 {
     margin: 0;
 }
 
-/* Gaya untuk main */
-main {
-    margin-top: 20px;
-}
-
-/* Gaya untuk paragraf */
-main p {
-    background: #fff;
+#content {
+    float: left;
+    width: 70%;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
 }
 
-/* Gaya untuk footer */
+#sidebar {
+    float: right;
+    width: 30%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+}
+
 footer {
-    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    color: #777;
+    padding: 10px 0;
+    clear: both; /* Clear float */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content, #sidebar {
+        width: 100%;
+        float: none;
+    }
 }
